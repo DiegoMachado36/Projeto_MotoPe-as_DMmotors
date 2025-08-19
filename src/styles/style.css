@@ -1,0 +1,125 @@
+:root {
+    --backround-color: #000;
+    --text-color: #fff;
+    --button-color: #FF6600;
+    --vermelho-intenso-color: #E10600;
+    --preto-carbono-color: #0A0A0A;
+    --cinza-metalico-color: #7A7A7A;
+    --branco-gelo-color: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--backround-color);
+    justify-content: space-around;
+}
+
+.Logo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+}
+
+.Menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Menu ul {
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+}
+
+.Menu ul li {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Menu ul li a {
+    text-decoration: none;
+    color: var(--branco-gelo-color);
+}
+
+.Login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.Login button {
+    border-image: linear-gradient(to right, var(--button-color), var(--vermelho-intenso-color)) 1 1 1 1;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}   
+
+/* Section Background Styles */
+
+.img-background {
+    background-image: linear-gradient(to bottom, rgba(5, 9, 211, 0.1), #06121e), url('../img/bannermoto.png');
+    background-size: cover;
+    background-position: center;
+    height: 80%;
+    display: flex;
+}
+
+.text-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+    width: 50%;
+    margin: auto;
+}
+
+.text-background h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.text-background p {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+}   
+
+.text-background .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.img-container img {
+    width: 100rem;
+}
