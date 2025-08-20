@@ -1,11 +1,11 @@
 :root {
-    --backround-color: #000;
-    --text-color: #fff;
+    --backround-color: #001f3f;
+    --text-color: #ffffff;
+    --texto-secundario-color: #b0b0b0;
     --button-color: #FF6600;
-    --vermelho-intenso-color: #E10600;
+    --azul-neon-bordas-glow: #00aaff;
     --preto-carbono-color: #0A0A0A;
     --cinza-metalico-color: #7A7A7A;
-    --branco-gelo-color: #F5F5F5;
 }
 
 * {
@@ -18,6 +18,9 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    padding: 1rem 2rem;
+    background: linear-gradient(180deg, #2d004d 0%, #001f3f 100%);
+    color: #ffffff;
 }
 
 /* Header Styles */
@@ -25,7 +28,7 @@ header {
     display: flex;
     width: 100%;
     height: 6rem;
-    background-color: var(--backround-color);
+    background-color: var(--preto-carbono-color);
     justify-content: space-around;
 }
 
@@ -33,7 +36,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7.5rem;
+    width: 7.9rem;
+}
+
+.Logo img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .Menu {
@@ -58,6 +66,11 @@ header {
     color: var(--branco-gelo-color);
 }
 
+.Menu ul li a:hover {
+    color: var(--azul-neon-bordas-glow);
+    transition: 1s;
+}
+
 .Login {
     display: flex;
     align-items: center;
@@ -65,14 +78,84 @@ header {
     gap: 1.5rem;
 }
 
-.Login button {
-    border-image: linear-gradient(to right, var(--button-color), var(--vermelho-intenso-color)) 1 1 1 1;
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05); /* vidro fosco */
+  border: 1px solid var(--azul-neon-bordas-glow);
+  border-radius: 50px;
+  padding: 0.5rem 1.6rem;
+  width: 25rem;
+  max-width: 90%;
+  margin: 1.25rem auto;
+  box-shadow: 0 0 12px var(--azul-neon-bordas-glow);
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.search-bar input::placeholder {
+  color: #b0b0b0;
+}
+
+.search-bar button {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.login-button {
+    position: relative;
+    display: inline-block;
+}
+
+.login-button button{
+    border: 1px solid var(--azul-neon-bordas-glow);
     padding: 0.8rem 1.5rem;
     font-size: 1.5rem;
     background-color: transparent;
     color: var(--text-color);
     cursor: pointer;
-}   
+    border-radius: 10px;
+}  
+
+.login-button button:hover {
+    background-color: var(--button-color);
+    transition: 1s;
+}
+
+.register-button {
+  position: absolute;
+  top: 100%; /* logo abaixo do botão Logar */
+  left: 0;
+  display: none; /* escondido por padrão */
+}
+
+.login-button:hover .register-button {
+  display: block; /* aparece ao passar mouse */
+}
+
+.register-button button {
+  background: #008cff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
 
 /* Section Background Styles */
 
@@ -84,42 +167,49 @@ header {
     display: flex;
 }
 
-.text-background {
+.text-container {
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
-    text-align: center;
-    color: var(--text-color);
-    width: 50%;
-    margin: auto;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.text-background {
+    max-width: 700px;
+    padding: 2rem;
 }
 
 .text-background h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
+    line-height: 0.9;
+    background: linear-gradient(90deg, #fc6b0a, #008cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-background p {
-    font-size: 1.9rem;
-    margin-bottom: 2rem;
-}   
-
-.text-background .btn {
-    padding: 0.8rem 1.5rem;
     font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.text-background button {
     background-color: var(--button-color);
     color: var(--text-color);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-}
-
 .img-container img {
-    width: 100rem;
+    width: 100%;
+    height: 600px;
+    max-width: 600px;
+    
+    
 }
