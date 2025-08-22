@@ -209,7 +209,22 @@ header {
 .img-container img {
     width: 100%;
     height: 600px;
-    max-width: 600px;
-    
+    max-width: 600px; 
+}
+
+/* Categories Section Styles */
+
+.categorias {
+    display: flex;
+    width: 100%;
+    height: 8.5rem;
+    background-color: var(--backround-color);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.categoria img {
+    width: 20rem;
     
 }
