@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
     <title>DM MotoStore</title>
 </head>
 
 <body>
+    <!-- Header Section -->
     <header>
 
         <div class="Logo">
@@ -40,21 +44,23 @@
         </nav>
     </header>
 
+    <!-- Main Section -->
     <section class="img-background">
 
         <div class="text-container">
             <div class="text-background">
                 <h1>Bem-vindo à DM MotoStore</h1>
-                <p>Encontre as melhores motos e acessórios para você!</p>
-                <button class="btn">Ver Produtos</button>
+                <p>Encontre os melhores acessórios para você!</p>
+                <button class="btn">Saiba mais</button>
             </div>
 
             <div class="img-container">
-                <img src="src/img/img_moto.png" alt="">
+                <img src="src/img/img_moto.png" alt="Imagem de uma moto esportiva">
             </div>
         </div>
     </section>
 
+    <!-- Section Logo marcas-->
     <section class="categorias">
         <div class="categoria">
             <img src="src/img/hondalogo-removebg-preview.png" alt="Logo da Honda">
@@ -66,9 +72,202 @@
             <img src="src/img/logosuzuki-removebg-preview.png" alt="Logo da Suzuki">
         </div>
         <div class="categoria">
-            <img src="src/img/kawasakilogo-removebg-preview.png" alt="Logo da Kawasaki">
+            <img src="src/img/kawasaki-vermelho.png" alt="Logo da Kawasaki">
         </div>
     </section>
+
+    <!-- Services List Section -->
+    <section class="lista_servicos">
+        <div class="servicos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#b0b0b0" viewBox="0 0 24 24">
+                <path
+                    d="M3 6h11v4h5l3 5v5h-2a3 3 0 1 1-6 0H9a3 3 0 1 1-6 0H1V6h2Zm15 6v2h3.34l-1.2-2H18Zm-9 6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm10 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+            </svg>
+            <span>Entregamos em todo Brasil</span>
+        </div>
+
+        <div class="servicos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill=" #b0b0b0" viewBox="0 0 24 24">
+                <path d="M12 2l6 6-6 6-6-6 6-6Zm0 8l6 6-6 6-6-6 6-6Z" />
+            </svg>
+            <span>Aceitamos pagamentos via Pix</span>
+        </div>
+
+        <div class="servicos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill=" #b0b0b0" viewBox="0 0 24 24">
+                <path
+                    d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm0 4v2h18V8H3Zm0 4v6h18v-6H3Zm4 2h4v2H7v-2Z" />
+            </svg>
+            <span>Parcele em até 10x sem juros</span>
+        </div>
+
+        <div class="servicos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill=" #b0b0b0" viewBox="0 0 24 24">
+                <path
+                    d="M12 2l9 4v6c0 5.25-3.438 10.438-9 12-5.563-1.563-9-6.75-9-12V6l9-4Zm0 18c4.063-1.125 7-5.25 7-8.25V7.313L12 4.5 5 7.313V11.75C5 14.75 7.938 18.875 12 20Zm-1-4l-3-3 1.5-1.5L11 13l3.5-3.5L16 11l-5 5Z" />
+            </svg>
+            <span>Qualidade e segurança</span>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <main>
+        <section class="lista_produtos">
+
+            <h2>Conheça Nossos Departamentos!</h2>
+
+
+            <div id="container_cards" class="area_cards"></div>
+
+            <script src="src/assets/js/cards.js"></script>
+
+        </section>
+    </main>
+
+    <!-- Section Mão de obra-->
+    <section class="mao_de_obra">
+        <div class="content_mao_de_obra">
+            <h2>Cuide da sua moto com quem entende</h2>
+            <p>Revisões, manutenção e personalização com qualidade e rapidez. Agende online em 2 minutos.</p>
+            <div class="btn_mao_de_obra">
+                <a class="btn btn_servico" href="#">Agendar Serviço</a>
+                <a class="btn btn_orcamento" href="#">Orçamento Rápido</a>
+            </div>
+        </div>
+
+        <div class="img_mao_de_obra">
+            <div class="agendar_mao_de_obra">
+                <label class="muted">Agendar Rápido</label>
+                <input type="text" placeholder="Nome Completo" aria-label="Nome Completo">
+                <input type="text" placeholder="Telefone" aria-label="Telefone">
+                <select aria-label="modelo">
+                    <option value="">Selecione a moto</option>
+                    <option value="honda">Honda</option>
+                    <option value="yamaha">Yamaha</option>
+                    <option value="suzuki">Suzuki</option>
+                    <option value="kawasaki">Kawasaki</option>
+                </select>
+                <button>Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="servico">
+        <h2>Nossos Serviços</h2>
+        <p class="text_servico">Atendemos desde revisão rápida até customização completa.</p>
+
+        <div class="card_servico">
+            <article class="card_box">
+                <i class="bi bi-box-fill"></i>
+                <strong>Revisão Completa</strong>
+                <p>Checagem 50 pontos + lubrificação</p>
+            </article>
+
+            <article class="card_box">
+                <i class="bi bi-box-fill"></i>
+                <strong>Revisão Completa</strong>
+                <p>Checagem 50 pontos + lubrificação</p>
+            </article>
+
+            <article class="card_box">
+                <i class="bi bi-box-fill"></i>
+                <strong>Revisão Completa</strong>
+                <p>Checagem 50 pontos + lubrificação</p>
+            </article>
+
+            <article class="card_box">
+                <i class="bi bi-box-fill"></i>
+                <strong>Revisão Completa</strong>
+                <p>Checagem 50 pontos + lubrificação</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="galeria">
+        <h2>Nossa Galeria</h2>
+        <p class="text_galeria">Veja alguns dos nossos trabalhos recentes</p>
+        <div class="img_galeria">
+            <img src="src/img/galeria/faixada_loja.png" alt="Faixada da loja DM MotoStore">
+            <img src="src/img/galeria/atendentes_moto.png" alt="Funcionario atendendo cliente na loja">
+            <img src="src/img/galeria/interna_loja.png" alt="Imagem interna da loja DM MotoStore">
+            <img src="src/img/galeria/mecanico_trabalhando.png" alt="Mecânico com graxa no avental">
+            <img src="src/img/galeria/mecanicos.png" alt="Mecânicos trabalhando em motos na oficina">
+            <img src="src/img/galeria/Oficina de motocicleta em ação.png"
+                alt="Mecânico trabalhando em uma moto na oficina">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="container_sobre">
+        <div>
+            <h2 style="font-size: 1.7rem">Sobre Nós</h2>
+            <p style="padding-top: 2rem;">A DM MotoStore existe desde 2020 oferecendo serviço profissional com garantia.
+                Nossa equipe é certificada e usamos peças de qualidade para garantir segurança e performance.</p>
+            <h3 style="padding-top: 2rem; font-size: 1.7rem;">Diferenciais</h3>
+            <ul class="sobre_list">
+                <li>Garantia de serviço</li>
+                <li>Peças originais ou homologadas</li>
+                <li>Pagamento via Pix, cartão ou dinheiro</li>
+            </ul>
+
+            <div style="display:flex;gap:12px;margin-top:18px">
+                <!-- ícones de pagamento/segurança inline -->
+                <div style="display:flex;align-items:center;gap:8px"><svg width="36" height="36" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M3 12h18" />
+                    </svg><small class="muted">Entrega</small></div>
+                <div style="display:flex;align-items:center;gap:8px"><svg width="36" height="36" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.6">
+                        <rect x="2" y="4" width="20" height="14" rx="2" />
+                    </svg><small class="muted">Cartão</small></div>
+                <div style="display:flex;align-items:center;gap:8px"><svg width="36" height="36" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.6">
+                        <path d="M12 2l3 6 6 .5-4.5 3 1.5 6-5-3-5 3 1.5-6L3 8.5 9 8z" />
+                    </svg><small class="muted">Segurança</small></div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h2>Entre em Contato</h2>
+            <form action="" class="form_contact">
+                <label style="font-size: 1.2rem;" for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                <label style="font-size: 1.2rem;" for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Seu email">
+                <label style="font-size: 1.2rem;" for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="info_contact">
+                <strong>Endereço</strong>
+                <p>Rua Guararema, 382 - Calmon Viana - Poá - SP</p>
+                <strong>Hórario</strong>
+                <p>Seg–Sex 8:00–18:00 • Sáb 8:00–12:00</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="linha_footer"></div>
+
+    <footer>
+        <div style="display: flex;justify-content:space-evenly;align-items:center;gap:20px">
+            <div>
+                <strong>DM MotoStore</strong>
+                <div>
+                    <p>© 2024 DM MotoStore • Todos os direitos reservados.</p>
+                </div>
+            </div>
+            <div class="social_media">
+                <i style="font-size: 3rem;" class="bi bi-facebook"></i>
+                <i style="font-size: 3rem;" class="bi bi-instagram"></i>
+                <i style="font-size: 3rem;" class="bi bi-whatsapp"></i>
+            </div>
+        </div>
+    </footer>
+
 
 </body>
 
